@@ -3,10 +3,25 @@
     <head>
         <title>Login</title>
     </head>
+    
+    <style>
+        #container {
+            width: 300px;
+            margin: auto;
+            height: 200px;
+            position: absolute;
+            border: black solid 1px;
+            border-radius: 5px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+    </style>
+
     <body>
         <h1>Login</h1>
         <div id="container">
-            <form action="/login", method="post">
+            <form action="login.html" method="post">
                 <label for="username">Username/Email</label><br>
                 <input type="text" placeholder="Username/Email"><br>
                 <label for="password">Password</label><br>
