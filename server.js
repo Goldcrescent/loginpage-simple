@@ -7,13 +7,11 @@ const app = express();
 app.use(express.json());
 app.use(express.static("public"));
 
-mongoose.connect (
-    mongodb+srv://tomharker3_db_user:6a1cad5ac657806e7aabc113@cluster0.j7xxxvn.mongodb.net/?appName=mongosh+2.8.3
-);
+mongoose.connect ("mongodb+srv://tomharker3_db_user:klxf472dJPIeVVmZ@cluster0.j7xxxvn.mongodb.net/LoginDB");
 
 const userSchema = new mongoose.Schema({
-    email: string,
-    password: string
+    email: String,
+    password: String
 });
 
 const User = mongoose.model("User", userSchema);
