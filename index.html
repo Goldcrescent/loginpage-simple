@@ -10,11 +10,14 @@
             margin: auto;
             height: 200px;
             position: absolute;
+            background-color: lightblue;
             border: black solid 1px;
             border-radius: 5px;
-            justify-content: center;
-            align-items: center;
-            display: flex;
+            left: 35%;
+        }
+
+        body {
+            background-color: rgb(74, 172, 205);
         }
     </style>
 
@@ -22,12 +25,33 @@
         <h1>Login</h1>
         <div id="container">
             <form action="login.html" method="post">
-                <label for="username">Username/Email</label><br>
-                <input type="text" placeholder="Username/Email"><br>
+                <label for="email">Email</label><br>
+                <input type="email" placeholder="Email"><br>
                 <label for="password">Password</label><br>
                 <input type="password" placeholder="Password"><br>
                 <input type="submit" value="login">
             </form>
         </div>
     </body>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const response = await fetch("/login", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    username: document.getElementById("username").value,
+                    password: document.getElementById("password").value
+                })
+            });
+
+            const result = await response.json();
+            alert(result.message);
+        });
+    </script>
+    
 </html>
