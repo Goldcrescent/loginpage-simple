@@ -1,3 +1,3 @@
 # loginpage-simple
 A simple login page
-hosted at - simplelp.scriptstart.tech(DEMO PAGE)
+hosted at - https://goldcrescent.github.io/loginpage-simple/(DEMO PAGE)
